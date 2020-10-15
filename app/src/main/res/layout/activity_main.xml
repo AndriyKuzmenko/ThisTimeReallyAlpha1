@@ -50,6 +50,7 @@
             android:layout_weight="1" />
 
         <Spinner
+            android:id="@+id/continentSpinner"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1" />
