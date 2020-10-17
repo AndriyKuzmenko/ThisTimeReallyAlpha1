@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
     String[][] citiesAfrica={{"Luanda","N'dalatando","Lobito","Lubango","Huambo"},
-                             {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"}};
+                             {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"},
+                             {"Yaounde","Douala","Bamenda","Bafoussam","Garoua"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
