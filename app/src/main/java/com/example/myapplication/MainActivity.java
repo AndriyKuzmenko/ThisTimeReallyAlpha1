@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener
@@ -23,7 +24,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                              {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"}};
 
     Spinner continentsSpinner, countriesSpinner;
-    int continent;
+    ListView citiesListView;
+    int continent, country;
+    ArrayAdapter<String> adp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -33,10 +36,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         continentsSpinner=(Spinner)findViewById(R.id.continentSpinner);
         countriesSpinner=(Spinner)findViewById(R.id.countriesSpinner);
+        citiesListView=(ListView)findViewById(R.id.citiesListView);
 
         continentsSpinner.setOnItemSelectedListener(this);
+        countriesSpinner.setOnItemSelectedListener(this);
 
-        ArrayAdapter<String> adp=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,continents);
+        adp=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,continents);
         continentsSpinner.setAdapter(adp);
     }
 
@@ -52,9 +57,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         if (parent.getId()==continentsSpinner.getId())
         {
             if (position == 0) return;
-            ArrayAdapter<String> adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, countries[position - 1]);
+            adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, countries[position - 1]);
             countriesSpinner.setAdapter(adp);
             continent=position-1;
+        }
+        else
+        {
+            if (position == 0) return;
+            country=position-1;
+
+            switch(continent)
+            {
+                case 0:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesAfrica[position - 1]);
+                    citiesListView.setAdapter(adp);
+                    break;
+            }
         }
     }
 
