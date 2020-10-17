@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                              {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"},
                              {"Yaounde","Douala","Bamenda","Bafoussam","Garoua"},
                              {"Cairo","Alexandria","Luxor","Aswan","Giza"},
-                             {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"}};
+                             {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                             {"Monrovia","Gantu","Zwedru","Kakatu","Harper"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
