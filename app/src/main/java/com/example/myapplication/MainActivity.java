@@ -29,6 +29,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                              {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
                              {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
 
+    String[][] populationsAfrica={{"2,571,861","168,832","393,079","776,246","713,134"},
+                                  {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"},
+                                  {"Yaounde","Douala","Bamenda","Bafoussam","Garoua"},
+                                  {"Cairo","Alexandria","Luxor","Aswan","Giza"},
+                                  {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                                  {"Monrovia","Gantu","Zwedru","Kakatu","Harper"},
+                                  {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
+                                  {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
+
+    String[][] areasAfrica={{"116 km^2","1,030 km^2","989 km^2","3,147 km^2","2,711 km^2"},
+                            {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"},
+                            {"Yaounde","Douala","Bamenda","Bafoussam","Garoua"},
+                            {"Cairo","Alexandria","Luxor","Aswan","Giza"},
+                            {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                            {"Monrovia","Gantu","Zwedru","Kakatu","Harper"},
+                            {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
+                            {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
+
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
     int continent, country;
