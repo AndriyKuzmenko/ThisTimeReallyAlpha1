@@ -73,10 +73,11 @@
             android:layout_weight="5" />
 
         <TextView
+            android:id="@+id/populationTextView"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Population:" />
 
         <Space
             android:layout_width="match_parent"
@@ -84,10 +85,11 @@
             android:layout_weight="1" />
 
         <TextView
+            android:id="@+id/areaTextView"
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="Area:" />
 
         <Space
             android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener, AdapterView.OnItemClickListener
 {
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                           {"-Country-","Australia","Cook Islands","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
-    String[][] citiesAfrica={{"Luanda","N'dalatando","Lobito","Lubango","Huambo"},
+    String[][] citiesAfrica={{"Luanda","N'dalatando","Lobito","Lubango","New Lisbon"},
                              {"Gaborone","Francistown","Maun","Lobatse","Selebi Phikwe"},
                              {"Yaounde","Douala","Bamenda","Bafoussam","Garoua"},
                              {"Cairo","Alexandria","Luxor","Aswan","Giza"},
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
+    TextView populationTextView, areaTextView;
+
     int continent, country;
     ArrayAdapter<String> adp;
 
@@ -61,9 +64,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         continentsSpinner=(Spinner)findViewById(R.id.continentSpinner);
         countriesSpinner=(Spinner)findViewById(R.id.countriesSpinner);
         citiesListView=(ListView)findViewById(R.id.citiesListView);
+        populationTextView=(TextView)findViewById(R.id.populationTextView);
+        areaTextView=(TextView)findViewById(R.id.areaTextView);
 
         continentsSpinner.setOnItemSelectedListener(this);
         countriesSpinner.setOnItemSelectedListener(this);
+        citiesListView.setOnItemClickListener(this);
 
         adp=new ArrayAdapter<String>(this,R.layout.support_simple_spinner_dropdown_item,continents);
         continentsSpinner.setAdapter(adp);
@@ -72,7 +78,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-
+        populationTextView.setText("Population: "+populationsAfrica[country][position]);
+        areaTextView.setText("Area: "+areasAfrica[country][position]);
     }
 
     @Override
@@ -94,9 +101,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             {
                 case 0:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesAfrica[position - 1]);
-                    citiesListView.setAdapter(adp);
                     break;
             }
+            citiesListView.setAdapter(adp);
         }
     }
 
