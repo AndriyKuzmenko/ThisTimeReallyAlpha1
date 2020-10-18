@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                   {"9,908,788","5,200,000","506,588","24,300","8,800,000"},
                                   {"4,800,000","440,000","750,991","315,267","610,431"},
                                   {"34,128","78,629","37,644","33,020","32,940"},
-                                  {"11,146,053","205,294","233,708","176,00","78,800"},
+                                  {"11,146,053","205,294","233,708","176,000","78,800"},
                                   {"3,740,026","5,635,127","3,720,953","2,472,612","967,677"}};
 
     String[][] areasAfrica={{"116 km^2","110 km^2","989 km^2","3,147 km^2","2,711 km^2"},
@@ -47,6 +47,33 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             {"16.62 km^2","165.4 km^2","178.5 km^2","118.35 km^2","87.21 km^2"},
                             {"83 km^2","9 km^2","5,357 km^2","19,241 km^2","42,364 km^2"},
                             {"2,461 km^2","1,644.98 km^2","225.91 km^2","687.54 km^2","251.03 km^2"}};
+
+    String[][] citiesAsia={{"Bombay","Bengaluru","Chennai","Kolkata","Hyderabad"},
+                           {"Jerusalem","Tel Aviv","Haifa","Netnanya","Be'er Sheva"},
+                           {"Tokyo","Osaka","Kyoto","Sapporo","Nagoya"},
+                           {"Kathmandu","Pokhara","Lalitpur","Bhaktapur","Biratnagar"},
+                           {"Manila","Quezon","Cebu City","Makati","Baguio"},
+                           {"Colombo","Galle","Kandy","Jaffna","Trincomalee"},
+                           {"Seoul","Busan","Incheon","Daegu","Ulsan"},
+                           {"Taipei","Kaohsiung City","Tainan","Taichung","Keelung City"}};
+
+    String[][] populationsAsia={{"18,410,000","8,426,000","7,088,000","14,850,000","6,810,000"},
+                                {"874,186","435,856","279,249","209,390","204,707"},
+                                {"9,273,000","2,691,000","1,475,000","1,952,000","2,296,000"},
+                                {"1,003,000","264,991","226,728","81,728","204,949"},
+                                {"1,780,000","2,936,000","922,611","582,602","345,366"},
+                                {"752,993","93,118","125,400","88,138","99,135"},
+                                {"9,776,053","3,429,00","2,923,400","2,465,000","1,166,000"},
+                                {"2,646,000","2,773,000","1,881,000","2,817,000","371,878"}};
+
+    String[][] areasAsia={{"603.4 km^2","709 km^2","463 km^2","206.1 km^2","625 km^2"},
+                          {"125.1 km^2","52 km^2","63.67 km^2","28.5 km^2","117.5 km^2"},
+                          {"2,194 km^2","223 km^2","827.8 km^2","1,121 km^2","326.4 km^2"},
+                          {"3,085.12 km^2","464.2 km^2","37.4 km^2","16.89 km^2","58.48 km^2"},
+                          {"42.88 km^2","166.2 km^2","28 km^2","50 km^2","57.5 km^2"},
+                          {"37.31 km^2","16.52 km^2","28.53 km^2","20.2 km^2","7.5 km^2"},
+                          {"605.2 km^2","770 km^2","1,063 km^2","883.5 km^2","1,057 km^2"},
+                          {"271.8 km^2","2,952 km^2","2192 km^2","2,215 km^2","132.8 km^2"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
@@ -78,8 +105,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-        populationTextView.setText("Population: "+populationsAfrica[country][position]);
-        areaTextView.setText("Area: "+areasAfrica[country][position]);
+        switch(continent)
+        {
+            case 0:
+                populationTextView.setText("Population: " + populationsAfrica[country][position]);
+                areaTextView.setText("Area: " + areasAfrica[country][position]);
+                break;
+            case 1:
+                populationTextView.setText("Population: " + populationsAsia[country][position]);
+                areaTextView.setText("Area: " + areasAsia[country][position]);
+                break;
+        }
     }
 
     @Override
@@ -101,6 +137,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             {
                 case 0:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesAfrica[position - 1]);
+                    break;
+                case 1:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesAsia[position - 1]);
                     break;
             }
             citiesListView.setAdapter(adp);
