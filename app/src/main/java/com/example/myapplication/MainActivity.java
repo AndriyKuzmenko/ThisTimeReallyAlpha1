@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 {
     String[] continents={"-Continent-","Africa","Asia","Europe","N. America", "Oceania","S. America"}; //N.=North    S.=South
 
-    String[][] countries={{"-Country-","Angola","Benin","Congo","Egypt","Eritrea","Liberia","Senegal","S. Africa"},
+    String[][] countries={{"-Country-","Angola","Benin","Congo","Egypt","Ethiopia","Liberia","Senegal","S. Africa"},
                           {"-Country-","India","Israel","Japan","Nepal","Philippines","Sri Lanka","S. Korea","Taiwan"},
                           {"-Country-","Albania","Belgium","Finland","France","Germany","Norway","Spain","United Kingdom"},
                           {"-Country-","Anguila","Bahamas","Belize","Canada","Cayman Islands","Greenland","St. Martin","United States"},
@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                              {"Cotonou","Porto Novo","Parakou","Djougou","Bohican"},
                              {"Kinshasa","Lubumbashi","Kananga","Kolwezi","Mbuji-Mayi"},
                              {"Cairo","Alexandria","Luxor","El Mahmoudiyah","Giza"},
-                             {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                             {"Addis Ababa","Dire Dawa","Bahir Dar","Hawassa","Dessie"},
                              {"Monrovia","Gantu","Zwedru","Kakatu","Harper"},
                              {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
                              {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                   {"231,626","264,320","206,667","237,040","149,271"},
                                   {"14,340,000","1,794,000","1,272,000","572,942","3,368,000"},
                                   {"9,908,788","5,200,000","506,588","24,300","8,800,000"},
-                                  {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                                  {"4,800,000","440,000","750,991","315,267","610,431"},
                                   {"Monrovia","Gantu","Zwedru","Kakatu","Harper"},
                                   {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
                                   {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             {"79 km^2","110 km^2","441 km^2","3,966 km^2","44 km^2"},
                             {"9,965 km^2","210 km^2","742.8 km^2","213 km^2","135.1 km^2"},
                             {"3,085.12 km^2","2,679 km^2","416 km^2","1,230","1,579.75 km^2"},
-                            {"Asmara","Mitsiwa","Barentu","Akordat","Adi Ugri"},
+                            {"225.7 km^2","1,213 km^2","28 km^2","50 km^2","15.08 km^2"},
                             {"Monrovia","Gantu","Zwedru","Kakatu","Harper"},
                             {"Dakar","Ziguinchor","Kaolack","Saint Louis","Tambaccounada"},
                             {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
