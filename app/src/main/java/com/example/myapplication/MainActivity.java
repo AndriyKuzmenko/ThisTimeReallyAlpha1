@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                   {"4,800,000","440,000","750,991","315,267","610,431"},
                                   {"34,128","78,629","37,644","33,020","32,940"},
                                   {"11,146,053","205,294","233,708","176,00","78,800"},
-                                  {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
+                                  {"3,740,026","5,635,127","3,720,953","2,472,612","967,677"}};
 
     String[][] areasAfrica={{"116 km^2","110 km^2","989 km^2","3,147 km^2","2,711 km^2"},
                             {"79 km^2","110 km^2","441 km^2","3,966 km^2","44 km^2"},
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             {"225.7 km^2","1,213 km^2","28 km^2","50 km^2","15.08 km^2"},
                             {"16.62 km^2","165.4 km^2","178.5 km^2","118.35 km^2","87.21 km^2"},
                             {"83 km^2","9 km^2","5,357 km^2","19,241 km^2","42,364 km^2"},
-                            {"Cape Town","Johannesburg","Durban","Pretoria","Port Elizabeth"}};
+                            {"2,461 km^2","1,644.98 km^2","225.91 km^2","687.54 km^2","251.03 km^2"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
