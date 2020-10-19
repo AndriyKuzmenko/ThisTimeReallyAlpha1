@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String[][] countries={{"-Country-","Angola","Benin","Congo","Egypt","Ethiopia","Reunion","Senegal","S. Africa"},
                           {"-Country-","India","Israel","Japan","Nepal","Philippines","Sri Lanka","S. Korea","Taiwan"},
                           {"-Country-","Albania","Belgium","Finland","France","Germany","Norway","Spain","United Kingdom"},
-                          {"-Country-","Anguila","Bahamas","Belize","Canada","Cayman Islands","Greenland","St. Martin","United States"},
+                          {"-Country-","Trinidad and Tobago","Barbados","Belize","Canada","Cayman Islands","Greenland","St. Martin","United States"},
                           {"-Country-","Australia","Cook Islands","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
@@ -108,6 +108,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             {"604.3 km^2","101.9 km^2","688,711 km^2","88.02 km^2","41.6 km^2"},
                             {"1,572 km^2","264 km^2","45.59 km^2","110 km^2","115.6 km^2"}};
 
+    //North America
+
+    String[][] citiesNAmerica={{"Arima","Chaguanas Borough","Point Fortin","Sangre Grande","Penal"},
+                               {"Nassau","Freeport","Marsh Harbour","Antwerp","Leuven"},
+                               {"Helsinki","Turku","Tampere","Oulu","Espoo"},
+                               {"Paris","Marseilee","Strasborg","Bordeaux","Nice"},
+                               {"Berlin","Munich","Humburg","Frankfurt","Cologne"},
+                               {"Bergen","Oslo","Stavanger","Trondheim","Tromso"},
+                               {"Madrid","Barcelona","Seville","Granada","Bilbao"},
+                               {"London","Edinburgh","Oxford","Bristol","Manchester"}};
+
+    String[][] populationsNAmerica={{"33,606","83,489","20,161","18,127","12,281"},
+                                    {"266,100","26,914","6,283","498,473","100,224"},
+                                    {"613,695","186,756","226,696","199,526","272,193"},
+                                    {"2,161,000","861,635","277,270","249,712","342,522"},
+                                    {"3,645,000","1,472,000","1,841,000","753,056","1,086,000"},
+                                    {"271,949","634,293","130,754","182,035","71,590"},
+                                    {"3,223,000","620,000","688,711","232,208","345,821"},
+                                    {"8,982,000","482,005","152,450","467,099","553,230"}};
+
+    String[][] areasNAmerica={{"12 km^2","59 km^2","23.88 km^2","13.5 km^2","9.66 km^2"},
+                              {"207 km^2","556.8 km^2","156.2 km^2","204.5 km^2","56.63 km^2"},
+                              {"213.8 km^2","243.4 km^2","523.4 km^2","1,410 km^2","312 km^2"},
+                              {"105.4 km^2","240.6 km^2","78.26 km^2","49.36 km^2","71.92 km^2"},
+                              {"891.8 km^2","310.4 km^2","755.2 km^2","248.3 km^2","405.2 km^2"},
+                              {"445.4 km^2","454 km^2","71.35 km^2","321.8 km^2","2,521 km^2"},
+                              {"604.3 km^2","101.9 km^2","688,711 km^2","88.02 km^2","41.6 km^2"},
+                              {"1,572 km^2","264 km^2","45.59 km^2","110 km^2","115.6 km^2"}};
+
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
     TextView populationTextView, areaTextView;
@@ -152,6 +181,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 populationTextView.setText("Population: " + populationsEurope[country][position]);
                 areaTextView.setText("Area: " + areasEurope[country][position]);
                 break;
+            case 3:
+                populationTextView.setText("Population: " + populationsNAmerica[country][position]);
+                areaTextView.setText("Area: " + areasNAmerica[country][position]);
+                break;
         }
     }
 
@@ -180,6 +213,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 2:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesEurope[position - 1]);
+                    break;
+                case 3:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesNAmerica[position - 1]);
                     break;
             }
             citiesListView.setAdapter(adp);
