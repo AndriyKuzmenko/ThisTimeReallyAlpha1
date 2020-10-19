@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                           {"-Country-","Australia","Cook Islands","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
+    //Africa
+
     String[][] citiesAfrica={{"Luanda","N'dalatando","Lobito","Lubango","New Lisbon"},
                              {"Cotonou","Porto Novo","Parakou","Djougou","Bohican"},
                              {"Kinshasa","Lubumbashi","Kananga","Kolwezi","Mbuji-Mayi"},
@@ -48,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             {"83 km^2","9 km^2","5,357 km^2","19,241 km^2","42,364 km^2"},
                             {"2,461 km^2","1,644.98 km^2","225.91 km^2","687.54 km^2","251.03 km^2"}};
 
+    //Asia
+
     String[][] citiesAsia={{"Bombay","Bengaluru","Chennai","Kolkata","Hyderabad"},
                            {"Jerusalem","Tel Aviv","Haifa","Netnanya","Be'er Sheva"},
                            {"Tokyo","Osaka","Kyoto","Sapporo","Nagoya"},
@@ -63,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 {"1,003,000","264,991","226,728","81,728","204,949"},
                                 {"1,780,000","2,936,000","922,611","582,602","345,366"},
                                 {"752,993","93,118","125,400","88,138","99,135"},
-                                {"9,776,053","3,429,00","2,923,400","2,465,000","1,166,000"},
+                                {"9,776,053","3,429,000","2,923,400","2,465,000","1,166,000"},
                                 {"2,646,000","2,773,000","1,881,000","2,817,000","371,878"}};
 
     String[][] areasAsia={{"603.4 km^2","709 km^2","463 km^2","206.1 km^2","625 km^2"},
@@ -74,6 +78,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                           {"37.31 km^2","16.52 km^2","28.53 km^2","20.2 km^2","7.5 km^2"},
                           {"605.2 km^2","770 km^2","1,063 km^2","883.5 km^2","1,057 km^2"},
                           {"271.8 km^2","2,952 km^2","2192 km^2","2,215 km^2","132.8 km^2"}};
+
+    //Europe
+
+    String[][] citiesEurope={{"Tirana","Berat","Durres","Gjirokaster","Vlore"},
+                             {"Brussels","Bruges","Ghent","Antwerp","Leuven"},
+                             {"Helsinki","Turku","Tampere","Oulu","Espoo"},
+                             {"Paris","Marseilee","Strasborg","Bordeaux","Nice"},
+                             {"Berlin","Munich","Humburg","Frankfurt","Cologne"},
+                             {"Bergen","Oslo","Stavanger","Trondheim","Tromso"},
+                             {"Madrid","Barcelona","Seville","Granada","Bilbao"},
+                             {"London","Edinburgh","Oxford","Bristol","Manchester"}};
+
+    String[][] populationsEurope={{"418,495","100,000","113,249","19,836","104,827"},
+                                  {"174,383","117,260","248,358","498,473","100,224"},
+                                  {"613,695","186,756","226,696","199,526","272,193"},
+                                  {"2,161,000","861,635","277,270","249,712","342,522"},
+                                  {"3,645,000","1,472,000","1,841,000","753,056","1,086,000"},
+                                  {"271,949","634,293","130,754","182,035","71,590"},
+                                  {"3,223,000","620,000","688,711","232,208","345,821"},
+                                  {"8,982,000","482,005","152,450","467,099","553,230"}};
+
+    String[][] areasEurope={{"41.8 km^2","6.3 km^2","338.3 km^2","5.25 km^2","647.9 km^2"},
+                            {"32.61 km^2","138 km^2","156.2 km^2","204.5 km^2","56.63 km^2"},
+                            {"213.8 km^2","243.4 km^2","523.4 km^2","1,410 km^2","312 km^2"},
+                            {"105.4 km^2","240.6 km^2","78.26 km^2","49.36 km^2","71.92 km^2"},
+                            {"891.8 km^2","310.4 km^2","755.2 km^2","248.3 km^2","405.2 km^2"},
+                            {"445.4 km^2","454 km^2","71.35 km^2","321.8 km^2","2,521 km^2"},
+                            {"604.3 km^2","101.9 km^2","688,711 km^2","88.02 km^2","41.6 km^2"},
+                            {"1,572 km^2","264 km^2","45.59 km^2","110 km^2","115.6 km^2"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
@@ -115,6 +148,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 populationTextView.setText("Population: " + populationsAsia[country][position]);
                 areaTextView.setText("Area: " + areasAsia[country][position]);
                 break;
+            case 2:
+                populationTextView.setText("Population: " + populationsEurope[country][position]);
+                areaTextView.setText("Area: " + areasEurope[country][position]);
+                break;
         }
     }
 
@@ -140,6 +177,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 1:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesAsia[position - 1]);
+                    break;
+                case 2:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesEurope[position - 1]);
                     break;
             }
             citiesListView.setAdapter(adp);
