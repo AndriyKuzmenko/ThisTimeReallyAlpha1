@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                           {"-Country-","India","Israel","Japan","Nepal","Philippines","Sri Lanka","S. Korea","Taiwan"},
                           {"-Country-","Albania","Belgium","Finland","France","Germany","Norway","Spain","United Kingdom"},
                           {"-Country-","Trinidad and Tobago","El Salvador","Belize","Canada","Panama","Mexico","Honduras","United States"},
-                          {"-Country-","Australia","Cook Islands","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
+                          {"-Country-","Australia","Fiji","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
     //Africa
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                     {"2,930,000","675,218","1,780,270","994,837","1,336,000"},
                                     {"477,328","74,952","82,907","88,997","9,092"},
                                     {"8,855,000","1,495,000","1,321,000","1,301,000","776,615"},
-                                    {"719,064","197,267","144,785","449,822,208","188,366"},
+                                    {"719,064","197,267","144,785","449,822","188,366"},
                                     {"8,399,000","883,305","2,706,000","684,498","3,990,0000"}};
 
     String[][] areasNAmerica={{"12 km^2","59 km^2","23.88 km^2","13.5 km^2","9.66 km^2"},
@@ -135,6 +135,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                               {"1,485 km^2","187.9 km^2","321.2 km^2","637 km^2","14,827 km^2"},
                               {"840 km^2","640 km^2","834 km^2","4,251 km^2","547.5 km^2"},
                               {"783.8 km^2","121.4 km^2","606.1 km^2","177 km^2","1,302 km^2"}};
+
+    //Oceania
+
+    String[][] citiesOceania={{"Sydeny","Melbourne","Perth","Adelaide","Brisbane"},
+                              {"Suva","Nadi","Savusavu","Sigakota","Lautoka"},
+                              {"Pape'eta","Arue","Mahina","Pa'ea","Fa'a'a"},
+                              {"Hagatna","Agat","Dededo","Mangilao","Tamuning"},
+                              {"Noumea","Mont-Dore","Dumbea","Tadline","Fayaoue"},
+                              {"Auckland","Wellington","Christchurch","Dunedin","Nelson"},
+                              {"Alofi","Avatele","Hakupu","Makefu","Mutalau"},
+                              {"Apia","Asau","Afega","Vailima","Leulumoega"}};
+
+    String[][] populationsOceania={{"5,230,000","4,936,000","1,985,000","1,306,000","2,280,000"},
+                                   {"93,970","42,284","3,372","9,622","71,573"},
+                                   {"25,763","10,243","14,764","13,021","29,506"},
+                                   {"1,051","4,917","44,943","15,191","19,685"},
+                                   {"94,285","27,620","35,873","7,492","4,411"},
+                                   {"1,657,000","1,388","381,500","128,800","52,900"},
+                                   {"639","143","220","70","100"},
+                                   {"35,744","650","2,137","1,462","1,290"}};
+
+    String[][] areasOceania={{"12,368 km^2","9,992 km^2","6,418 km^2","13.5 km^2","15,826 km^2"},
+                             {"2,048 km^2","7.8 km^2","5,587.5 km^2","61 km^2","20 km^2"},
+                             {"17.4 km^2","16 km^2","51.6 km^2","65 km^2","34.2 km^2"},
+                             {"3.63 km^2","27.19 km^2","77.7 km^2","13.41 km^2","14.66 km^2"},
+                             {"45.7 km^2","8.17 km^2","254.6 km^2","1.43 km^2","2.36 km^2"},
+                             {"1,086 km^2","119.8 km^2","1,426 km^2","3,314 km^2","422.2 km^2"},
+                             {"46.48 km^2","13.99 km^2","48.04 km^2","17.13 km^2","26.31 km^2"},
+                             {"123.8 km^2","3.84 km^2","1 km^2","1 km^2","0.5 km^2"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
@@ -184,6 +213,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 populationTextView.setText("Population: " + populationsNAmerica[country][position]);
                 areaTextView.setText("Area: " + areasNAmerica[country][position]);
                 break;
+            case 4:
+                populationTextView.setText("Population: " + populationsOceania[country][position]);
+                areaTextView.setText("Area: " + areasOceania[country][position]);
+                break;
         }
     }
 
@@ -215,6 +248,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 3:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesNAmerica[position - 1]);
+                    break;
+                case 4:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesOceania[position - 1]);
                     break;
             }
             citiesListView.setAdapter(adp);
