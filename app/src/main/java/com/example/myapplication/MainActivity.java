@@ -165,6 +165,35 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                              {"46.48 km^2","13.99 km^2","48.04 km^2","17.13 km^2","26.31 km^2"},
                              {"123.8 km^2","3.84 km^2","1 km^2","1 km^2","0.5 km^2"}};
 
+    //South America
+
+    String[][] citiesSAmerica={{"Buenos Aires","Cordoba","Mendoza","Ushuaia","Rosario"},
+                               {"La Paz","Cochabamba","Sucre","Potosi","El Alto"},
+                               {"Rio de Janeiro","Sao Paulo","Curitiba","Belo Horizonte","Porto Alegre"},
+                               {"Santiago","Valparaiso","Vina del Mar","Punta Arenas","Concepcion"},
+                               {"Port Stanley","Port Howard","Goose Greem","Hill Cove","North Arm"},
+                               {"Cayene","St. Laurent de Maroni","Mana","Roura","Kourou"},
+                               {"Lima","Cusco","Arequipa","Iquitos","Trujillo"},
+                               {"Montevideo","Colonia del Sacramento","Punta del Este","Salto","Ciudad de la Costa"}};
+
+    String[][] populationsSAmerica={{"2,890,000","325,708","1,886,000","56,500","1,700,000"},
+                                    {"1,858,000","1,758,000","300,000","174,973","943,558"},
+                                    {"6,320,000","12,180,000","1,765,000","1,433,000","1,409,000"},
+                                    {"5,614,000","295,113","326,759","17,846","220,746"},
+                                    {"2,108","20","40","16","25"},
+                                    {"57,614","43,600","10,241","3,713","26,221"},
+                                    {"8,575,000","428,450","1,008,000","447,000","682,834"},
+                                    {"1,381,000","27,000","15,000","104,028","2,194"}};
+
+    String[][] areasSAmerica={{"203 km^2","576 km^2","54 km^2","23 km^2","178.7 km^2"},
+                              {"472 km^2","348 km^2","1,768.5 km^2","53 km^2","370 km^2"},
+                              {"1,255 km^2","1,521 km^2","432 km^2","330.9 km^2","496.8 km^2"},
+                              {"641 km^2","401.6 km^2","121.6 km^2","17,846 km^2","72 km^2"},
+                              {"0.5 km^2","800 km^2","0.5 km^2","1 km^2","1 km^2"},
+                              {"23.6 km^2","4,830 km^2","6,333 km^2","3,902 km^2","2,160 km^2"},
+                              {"2,672 km^2","385.1 km^2","3,057 km^2","17.13 km^2","111.6 km^2"},
+                              {"200 km^2","525.5 km^2","20.35 km^2","14,163 km^2","51.25 km^2"}};
+
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
     TextView populationTextView, areaTextView;
@@ -217,6 +246,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 populationTextView.setText("Population: " + populationsOceania[country][position]);
                 areaTextView.setText("Area: " + areasOceania[country][position]);
                 break;
+            case 5:
+                populationTextView.setText("Population: " + populationsSAmerica[country][position]);
+                areaTextView.setText("Area: " + areasSAmerica[country][position]);
+                break;
         }
     }
 
@@ -251,6 +284,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     break;
                 case 4:
                     adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesOceania[position - 1]);
+                    break;
+                case 5:
+                    adp = new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, citiesSAmerica[position - 1]);
                     break;
             }
             citiesListView.setAdapter(adp);
