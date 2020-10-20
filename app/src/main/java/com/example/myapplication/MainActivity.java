@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String[][] countries={{"-Country-","Angola","Benin","Congo","Egypt","Ethiopia","Reunion","Senegal","S. Africa"},
                           {"-Country-","India","Israel","Japan","Nepal","Philippines","Sri Lanka","S. Korea","Taiwan"},
                           {"-Country-","Albania","Belgium","Finland","France","Germany","Norway","Spain","United Kingdom"},
-                          {"-Country-","Trinidad and Tobago","El Salvador","Belize","Canada","Panama","Greenland","St. Martin","United States"},
+                          {"-Country-","Trinidad and Tobago","El Salvador","Belize","Canada","Panama","Mexico","Honduras","United States"},
                           {"-Country-","Australia","Cook Islands","French Polynesia","Guam","New Caledonia","New Zealand","Niue","Samoa"},
                           {"-Country-","Argentina","Bolivia","Brazil","Chile","Falkland Islands","French Guiana","Peru","Uruguay"}};
 
@@ -114,27 +114,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                {"Belize City","San Pedro","Belmopan","San Ignacio","Punta Gordon"},
                                {"Toronto","Vancouver","Montreal","Ottawa","Calgary"},
                                {"Panama City","Tocumen","David","Santiago","Chitre"},
-                               {"Bergen","Oslo","Stavanger","Trondheim","Tromso"},
-                               {"Madrid","Barcelona","Seville","Granada","Bilbao"},
-                               {"London","Edinburgh","Oxford","Bristol","Manchester"}};
+                               {"Mexico City","Guadalajara","Ciudad Juarez","Tijuana","Merida"},
+                               {"San Pedro Sula","La Ceiba","Comayagua","Atlantida","El Progreso"},
+                               {"New York","San Francisco","Chicago","Washington D.C.","Los Angeles"}};
 
     String[][] populationsNAmerica={{"33,606","83,489","20,161","18,127","12,281"},
                                     {"238,244","265,921","72,951","73,064","283,223"},
                                     {"57,169","11,767","13,939","17,878","5,351"},
                                     {"2,930,000","675,218","1,780,270","994,837","1,336,000"},
                                     {"477,328","74,952","82,907","88,997","9,092"},
-                                    {"271,949","634,293","130,754","182,035","71,590"},
-                                    {"3,223,000","620,000","688,711","232,208","345,821"},
-                                    {"8,982,000","482,005","152,450","467,099","553,230"}};
+                                    {"8,855,000","1,495,000","1,321,000","1,301,000","776,615"},
+                                    {"719,064","197,267","144,785","449,822,208","188,366"},
+                                    {"8,399,000","883,305","2,706,000","684,498","3,990,0000"}};
 
     String[][] areasNAmerica={{"12 km^2","59 km^2","23.88 km^2","13.5 km^2","9.66 km^2"},
                               {"72.25 km^2","594 km^2","232.5 km^2","139.8 km^2","29.72 km^2"},
                               {"35.67 km^2","71.22 km^2","32.78 km^2","6 km^2","56.1 km^2"},
                               {"630.2 km^2","115 km^2","431.5 km^2","2,790 km^2","825.3 km^2"},
                               {"275 km^2","65.3 km^2","755.2 km^2","44.2 km^2","91 km^2"},
-                              {"445.4 km^2","454 km^2","66.9 km^2","321.8 km^2","2,521 km^2"},
-                              {"604.3 km^2","101.9 km^2","688,711 km^2","88.02 km^2","41.6 km^2"},
-                              {"1,572 km^2","264 km^2","45.59 km^2","110 km^2","115.6 km^2"}};
+                              {"1,485 km^2","187.9 km^2","321.2 km^2","637 km^2","14,827 km^2"},
+                              {"840 km^2","640 km^2","834 km^2","4,251 km^2","547.5 km^2"},
+                              {"783.8 km^2","121.4 km^2","606.1 km^2","177 km^2","1,302 km^2"}};
 
     Spinner continentsSpinner, countriesSpinner;
     ListView citiesListView;
