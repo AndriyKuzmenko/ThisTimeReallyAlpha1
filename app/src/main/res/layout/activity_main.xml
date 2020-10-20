@@ -77,7 +77,8 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:text="Population:" />
+            android:text="Population:"
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="match_parent"
@@ -89,7 +90,8 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="1"
-            android:text="Area:" />
+            android:text="Area:"
+            android:textStyle="bold" />
 
         <Space
             android:layout_width="match_parent"
