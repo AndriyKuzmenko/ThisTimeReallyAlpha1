@@ -4,103 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <Space
-        android:layout_width="0px"
-        android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="0px"
+    android:layout_weight="1" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
         android:layout_weight="1" />
 
-    <LinearLayout
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="4"
-        android:orientation="vertical">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <ListView
-            android:id="@+id/citiesListView"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="11" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-    </LinearLayout>
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:ems="10"
+        android:inputType="textPassword" />
 
     <Space
-        android:layout_width="0px"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
         android:layout_weight="1" />
 
-    <LinearLayout
-        android:layout_width="0px"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:orientation="vertical">
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <Spinner
-            android:id="@+id/continentSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <Spinner
-            android:id="@+id/countriesSpinner"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="5" />
-
-        <TextView
-            android:id="@+id/populationTextView"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:text="Population:"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-
-        <TextView
-            android:id="@+id/areaTextView"
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1"
-            android:text="Area:"
-            android:textStyle="bold" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="0px"
-            android:layout_weight="1" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:onClick="button2"
+        android:text="Button2" />
 
     <Space
-        android:layout_width="0px"
-        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:onClick="button"
+        android:text="Button" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:onClick="button1"
+        android:text="Button1" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
         android:layout_weight="1" />
 </LinearLayout>
